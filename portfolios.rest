@@ -1,6 +1,5 @@
-@host = https://idjd.supabase.co/rest/v1
-@apikey = your_token
-
+@host = {{host}}
+@apikey = {{apikey}}
 
 ### Create portfolios
 POST {{host}}/portfolios
