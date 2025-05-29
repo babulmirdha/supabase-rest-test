@@ -1,0 +1,54 @@
+@host = https://idjd.supabase.co/rest/v1
+@apikey = your_token
+
+
+### Create portfolios
+POST {{host}}/portfolios
+apikey: {{apikey}}
+Content-Type: application/json
+
+ {
+    "id": 6152710,
+    "userId": "35c57050-1b1e-4847-a57a-37abbe9607a5",
+    "name": "2",
+    "asset": "stock",
+    "shares": 0,
+    "balance": 0.00,
+    "total": 0.00,
+    "created_at": "2025-04-06T06:18:39.290366"
+  }
+
+### Get All portfolios
+GET {{host}}/portfolios
+apikey: {{apikey}}
+
+
+### Get All portfolios by UserId
+GET {{host}}/portfolios?userId=eq.13a31416-03c8-4222-b7dc-df08d0921132
+apikey: {{apikey}}
+
+### Get portfolios By Id
+GET {{host}}/portfolios?id=eq.615271
+apikey: {{apikey}}
+
+
+### Partial Update portfolios 
+PATCH  {{host}}/portfolios?id=eq.615271
+apikey: {{apikey}}
+Content-Type: application/json
+
+ {
+    "id": 615271,
+    "userId": "35c57050-1b1e-4847-a57a-37abbe9607a5",
+    "name": "2",
+    "asset": "stock",
+    "shares": 0,
+    "balance": 0.00,
+    "total": 0.00,
+    "created_at": "2025-04-06T06:18:39.290366"
+  }
+
+
+### Delete portfolios
+DELETE  {{host}}/portfolios?id=eq.729855
+apikey: {{apikey}}
